@@ -1,0 +1,58 @@
+/*** =================================================================***/
+/*                          MAIN MENU SECTION                           */
+/*** =================================================================***/
+.section-background-line
+  border-bottom: 4px solid $darkBlue
+  background:
+    image: url('../img/background-line-pattern.jpg')
+
+.header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: 116px
+  // background-color: pink
+
+  &--logo
+    width: 145px
+    height: 85px
+    background:
+      image: url('../img/tailor-made-logo.svg')
+      position: center
+      repeat: no-repeat
+
+  &--link-wrapper
+    display: flex
+    align-self: flex-end
+    a
+      position: relative
+      padding: 0 10px
+      margin-right: 40px
+      margin-bottom: 13px
+      text-transform: uppercase
+      font:
+        weight: bold
+        size: 18px
+      &.last-link
+        display: flex
+        margin-right: 0
+
+      &:hover
+        &::after
+          content: ''
+          display: block
+          position: absolute
+          background-color: $linkColorHover
+          width: 100%
+          height: 4px
+          bottom: -17px
+
+  &--user-wrapper
+    position: relative
+
+  &--user-avatar
+    width: 30px
+    height: 30px
+    border-radius: 100%
+    background:
+      image: url('../img/user-avatar.jpg')
