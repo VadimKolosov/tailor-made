@@ -2,19 +2,45 @@
   .header.container
     a(href="#").header--logo
     nav.header--link-wrapper
-      a(href="#") Home
-      a(href="#") About Us  
-      a(href="#") Blog  
-      a(href="#") Search  
-      a(href="#") Help      
-      a(href="#").last-link Marry Parker
-        .header--user-avatar
-          //- li
-          //-   a(href="#") Profile
-          //-   a(href="#") Message
-          //-   a(href="#") My account
-          //-   a(href="#") Jobs
-          //-   a(href="#") Notifications
-          //-   a(href="#") Settings
-          //-   a(href="#") Log Out
-            
+      a(href="#").header--link-nav Home
+      a(href="#").header--link-nav About Us  
+      a(href="#").header--link-nav Blog
+      a(href="#").header--link-nav Search
+      a(href="#").header--link-nav Help
+      .last-link-wrapper
+        a(href="#").last-link.header--link-nav Marry Parker
+          .header--user-avatar
+        .header--dropdown-menu
+          a(href="#")
+            i.icon-user
+            | Profile
+          .message-dropdown
+            a.mail(href="#")
+              i.icon-mail-alt
+              | Message
+              .header--message-box
+                .header--message
+                  a(href="#").last-link Katy and James
+                    .header--user-avatar.katyandjames
+                  p This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                  span 2
+                .header--message
+                  a(href="#").last-link Mett Hamish
+                    .header--user-avatar.mettham
+                  p This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                  span 1
+          a(href="#")
+            i.icon-shopping-basket
+            | My account
+          a(href="#")
+            i.icon-suitcase
+            | Jobs
+          a(href="#")
+            i.icon-bell-alt
+            | Notifications
+          a(href="#")
+            i.icon-cog
+            | Settings
+          a(href="#")
+            i.icon-logout
+            | Log Out

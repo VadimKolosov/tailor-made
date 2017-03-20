@@ -2,11 +2,42 @@
 /*                           VARIABLES                                  */
 /*** =================================================================***/
 $darkBlue: #0e2345
-$linkColorHover: #fbc936
+$yellow: #fbc936
+$superLight: #fafafa
+$messageColor: #999
+$grey: #555
 
+.flex-col
+  display: flex
+  flex-direction: column
 
-
+.flex-row
+  display: flex
+  flex-direction: row
 
 .container
   margin: 0 auto
   width: 1170px
+  @media (max-width: 1170px)
+    width: auto
+
+.site-button
+  background-color: $darkBlue
+  font-size: 18px
+  text-transform: uppercase
+  transition: all .2s ease-in-out
+  border: none
+  height: 40px
+  color: white
+  &.small
+    font-size: 16px
+    &:hover
+      a
+        color: white
+  &:hover
+    background-color: $yellow
+    a
+      color: $darkBlue
+  a
+    color: white
+    padding: 14px

@@ -1,0 +1,55 @@
+/*** =================================================================***/
+/*                              FOOTER                                  */
+/*** =================================================================***/
+
+.footer
+  box-sizing: border-box
+  padding: 50px 10px
+  background:
+    image: url('../img/background-line-pattern.jpg')
+  border-top: solid 4px $darkBlue
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5)
+
+  h4
+    color: $darkBlue
+    margin-top: 50px
+
+  &--content-wrapper
+    justify-content: space-around
+    h4
+      color: $darkBlue
+      text-transform: uppercase
+      margin-bottom: 10px
+
+  &--subscribe-wrapper
+    i
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 30px
+      height: 30px
+      color: white
+      background-color: $yellow
+      border-radius: 100%
+      margin-right: 20px
+      font-size: 12px
+
+
+  &--links-wrapper
+    width: 280px
+    a
+      color: $grey
+      margin-bottom: 5px
+      &:hover
+        color: $darkBlue
+        text-decoration: underline
+    form
+      .site-button
+        width: 120px
+        font-size: 16px
+      label
+        color: $grey
+
+input[type="email"]
+  margin: 10px 0 20px
+  padding: 10px
