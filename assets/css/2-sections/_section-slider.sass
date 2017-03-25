@@ -10,13 +10,21 @@
   width: auto
   background:
     image: url('../img/slider-image.jpg')
+    position: center
     size: cover
     repeat: no-repeat
+  @media(max-width: 1171px)
+    height: auto
 
 .slider
   h1
     span
       color: $darkBlue
+  @media(max-width: 1171px)
+    box-sizing: border-box
+    padding: 20px
+    h1
+      font-size: 42px
 
   &--desc
     position: relative
@@ -35,6 +43,18 @@
       width: 1px
       height: 120px
       background-color: $yellow
+    @media(max-width: 1171px)
+      height: auto
+      &::before
+        top: 50%
+        left: calc(50% - 150px)
+        width: 300px
+        height: 1px
+
+
+  &--desc-wrapper
+    @media(max-width: 1171px)
+      flex-direction: column
 
   &--col-wrapper
     margin: 15px 0 15px 15px
@@ -49,3 +69,10 @@
       margin-top: 5px
     &.second
       margin-left: 80px
+    @media(max-width: 1171px)
+      box-sizing: border-box
+      padding: 20px
+      text-align: center
+      margin: 0
+      &.second
+        margin: 0

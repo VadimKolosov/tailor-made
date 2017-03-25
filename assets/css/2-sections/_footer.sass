@@ -16,12 +16,19 @@
 
   &--content-wrapper
     justify-content: space-around
+    @media(max-width: 1170px)
+      flex-wrap: wrap
+
     h4
       color: $darkBlue
       text-transform: uppercase
       margin-bottom: 10px
 
   &--subscribe-wrapper
+    align-items: center
+    margin-bottom: 20px
+    h4
+      margin: 0
     i
       display: flex
       justify-content: center
@@ -37,6 +44,8 @@
 
   &--links-wrapper
     width: 280px
+    @media(max-width: 1170px)
+      1
     a
       color: $grey
       margin-bottom: 5px

@@ -10,7 +10,18 @@
 
   &--wrapper
     justify-content: space-around
+    @media(max-width: 1170px)
+      align-items: center
+      flex-direction: column
 
   &--block-wrapper
     text-align: center
     width: 360px
+    @media(max-width: 1170px)
+      width: auto
+      box-sizing: border-box
+      padding: 0 0 20px
+
+  &--image
+    @media(max-width: 1170px)
+      width: 100%

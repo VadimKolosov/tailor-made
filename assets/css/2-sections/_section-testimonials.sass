@@ -3,23 +3,52 @@
 /*** =================================================================***/
 
 .testimonials
+  position: relative
+  height: 420px
   box-sizing: border-box
   padding: 50px 10px
   background:
     image: url('../img/testimonials-image-one.jpg')
     repeat: no-repeat
     size: cover
+  @media(max-width: 880px)
+    height: 450px
+  @media(max-width: 600px)
+    height: 550px
+  @media(max-width: 490px)
+    height: 650px
+  @media(max-width: 390px)
+    height: 750px
+
 
   h2
     color: white
 
   &--wrapper
-    margin: 40px auto 0
     width: 880px
+    position: absolute
+    // background-color: pink
+    display: none
+    left: calc(50% - 440px)
+    @media(max-width: 880px)
+      width: auto
+      left: auto
+    @media(max-width: 575px)
+      top: 180px
+
+    &.active-blockquote
+      display: flex
+      flex-direction: column-reverse
+      @extend %animation
+
     blockquote
+      margin: 0 10px
       color: white
       text-align: center
       font-style: italic
+
+    @media(max-width: 1170px)
+      width: auto
 
   &--author-wrapper
     margin-top: 20px
@@ -35,12 +64,17 @@
   &--control
     margin-top: 40px
     justify-content: center
-    span
+    position: absolute
+    bottom: 50px
+    left: calc(50% - 28.5px)
+    .control-dot
       display: block
       width: 14px
       height: 14px
       background-color: white
       border-radius: 100%
       margin: 5px
-    .second-dot
-      background-color: $yellow
+      cursor: pointer
+      z-index: 22
+      &.active-dot
+        background-color: $yellow

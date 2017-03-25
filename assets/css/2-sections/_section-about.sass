@@ -14,6 +14,8 @@
     color: $grey
   &--row-wrapper
     justify-content: space-around
+    @media(max-width: 1170px)
+      flex-direction: column
 
   &--col-wrapper
     margin-top: 30px
@@ -24,10 +26,18 @@
     p
       text-align: left
     &.second
-      flex-direction: column-reverse
-
+      display: block
+      @media(max-width: 1170px)
+        display: flex
+        flex-direction: column-reverse
 
   &--col-image
     text-align: center
     img
       margin: 50px 0
+    @media(max-width: 600px)
+      img
+        width: 300px
+    @media(max-width: 400px)
+      img
+        width: 250px

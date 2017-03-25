@@ -24,6 +24,10 @@
   &--link-wrapper
     display: flex
     align-self: flex-end
+
+    .last-link-wrapper
+      order: 0
+
   &--link-nav
     position: relative
     padding: 0 10px
@@ -33,16 +37,16 @@
     font:
       weight: bold
       size: 18px
-
-    &:hover
-      &::after
-        content: ''
-        display: block
-        position: absolute
-        background-color: $yellow
-        width: 100%
-        height: 4px
-        bottom: -17px
+    @media(min-width: 1171px)
+      &:hover
+        &::after
+          content: ''
+          display: block
+          position: absolute
+          background-color: $yellow
+          width: 100%
+          height: 4px
+          bottom: -17px
 
   &--user-avatar
     width: 30px
@@ -125,3 +129,127 @@
   margin-right: 0
   flex-direction: row-reverse
   justify-content: flex-end
+
+.active-hamburger-icon
+  position: fixed
+  z-index: 12
+  transform: scale(0.90)
+  box-shadow: 0 0 1px 0 rgba(#11141b, 0.5)
+  span
+    background-color: white !important
+    position: absolute
+    margin-bottom: 0
+  .span-one
+    transform: rotate(45deg)
+  .span-two
+    display: none
+  .span-three
+    transform: rotate(-45deg)
+
+@media(max-width: 1170px)
+  .header
+    position: relative
+    justify-content: center
+
+    &--hamburger
+      z-index: 12
+      position: absolute
+      top: 40%
+      right: 5%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 40px
+      height: 40px
+      cursor: pointer
+      transition: all .1s linear
+      margin: 0
+      padding: 0
+      span
+        display: absolute
+        width: 50px
+        height: 4px
+        background-color: $darkBlue
+        margin-bottom: 8px
+        border-radius: 4px
+        transition: all .3s linear
+        &.span-three
+          margin-bottom: 0
+
+    &--logo-active
+      margin-top: 120px
+      position: fixed
+      z-index: 10
+      width: 250px
+      height: 146px
+      background:
+        position: center center
+        size: cover
+        repeat: no-repeat
+
+    &--link-wrapper
+      display: none
+
+    &--link-wrapper-active
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      text-align: right
+      position: fixed
+      background-color: lighten($darkBlue, 4%)
+      height: 100vh
+      width: 100%
+      top: 0
+      z-index: 9
+      overflow-x: hidden
+      transition: all .3s ease-in-out
+      a
+        color: white
+        order: 1
+        font-size: 32px
+        &:hover
+          color: $yellow
+
+    .last-link-wrapper
+      border-bottom: 1px solid $yellow
+      margin-bottom: 40px
+      position: relative
+
+    &--user-avatar
+      top: 0
+      align-self: center
+      width: 50px
+      height: 50px
+      background-size: cover
+      left: -25%
+
+    &--dropdown-menu
+      position: fixed
+      width: 100%
+      height: 100vh
+      position: fixed
+      top: 0
+      left: 0
+      justify-content: center
+      align-items: center
+      background-color: lighten($darkBlue, 4%)
+      a
+        border: none
+
+    &--message-box
+      position: fixed
+      width: 100%
+      height: 100vh
+      top: 0
+      left: 0
+      // display: flex !important
+      // display: none !important
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+    &--message
+      width: 100%
+      height: 25%
